@@ -4,8 +4,8 @@ I've found myself leaning on github pages more and more for static sites.  Becau
 
 # Usage
 
-## Clone
-Start by cloning or forking this repo into your own account.  This will then give you a place to customize your site
+## Use This Template
+Start by clicking "Use this template" and create this repo into your own account.  This will then give you a place to customize your site.
 
 ## Create gh-pages branch
 Create `gh-pages` branch and push manually one time.  I recommend that you [create an empty branch](https://stackoverflow.com/questions/34100048/github-create-empty-branch) for `gh-pages` and then push that with a simple "hello world" HTML page.  By doing this you will signify to the backend processes at GitHub that you plan on using gh-pages and that they should build your site.  If you don't, you'll have to spend a bunch of wasted time reaching out to support to get them to enable it.  Learn from my mistake.  Push something, anything, to the `gh-pages` branch manually at least once.
