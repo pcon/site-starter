@@ -3,10 +3,10 @@ name: Build
 on:
   push:
     branches:
-      - master
+      - main
   pull_requests:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -31,7 +31,7 @@ jobs:
           CI: true
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
