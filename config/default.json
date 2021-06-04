@@ -10,6 +10,7 @@
     },
     "build": {
         "css": "css",
+        "font": "webfont",
         "html": "html",
         "img": "img",
         "js": "js",
@@ -20,6 +21,7 @@
     },
     "static_files": {
         "js": [],
-        "css": []
+        "css": [],
+        "fonts": []
     }
 }

@@ -6,6 +6,7 @@ const constants = require('./constants');
 
 const SELECTOR_JS = 'static_files.js';
 const SELECTOR_CSS = 'static_files.css';
+const SELECTOR_FONT = 'static_files.fonts';
 
 /**
  * Gets an array of absolute file paths
@@ -53,6 +54,14 @@ function hasJS() {
 }
 
 /**
+ * If the config has the font files
+ * @returns {Boolean} If the font file list is not an empty array
+ */
+function hasFont() {
+    return has(SELECTOR_FONT);
+}
+
+/**
  *
  * @param {String} sub_directory The sub directory to save to
  * @param {String} selector The config selector
@@ -81,11 +90,21 @@ function static_css() {
     return static_files(constants.CSS, SELECTOR_CSS);
 }
 
+/**
+ * Copies the static font files
+ * @returns {Stream} A stream for the static font files
+ */
+function static_font() {
+    return static_files(constants.FONT, SELECTOR_FONT);
+}
+
 module.exports = {
     has: {
         css: hasCSS,
-        js: hasJS
+        js: hasJS,
+        font: hasFont
     },
     css: static_css,
-    js: static_js
+    js: static_js,
+    font: static_font
 };

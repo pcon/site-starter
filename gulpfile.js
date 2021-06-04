@@ -29,6 +29,10 @@ if (static_files.has.js()) {
     parallel_jobs.push(static_files.js);
 }
 
+if (static_files.has.font()) {
+    parallel_jobs.push(static_files.font);
+}
+
 const series_jobs = [
     gulp.parallel(parallel_jobs)
 ];
